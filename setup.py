@@ -30,7 +30,6 @@ setup(
     description='Django CMS Plugin to showcase a career or educational paths on portfolio and CV-Websites.',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='https://github.com/dmonn/djangocms-career/',
-    download_url='https://github.com/dmonn/djangocms-career/',
     license='BSD License',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
