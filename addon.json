@@ -1,7 +1,6 @@
 {
   "package-name": "djangocms-career",
   "installed-apps": [
-    "hvad",
     "cms",
     "djangocms-career"
   ]

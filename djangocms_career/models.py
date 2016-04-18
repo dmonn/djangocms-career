@@ -1,3 +1,4 @@
+from cms.models.pluginmodel import CMSPlugin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from hvad.models import TranslatableModel, TranslatedFields
@@ -24,3 +25,13 @@ class Position(TranslatableModel):
 
     def __unicode__(self):
         return self.title
+
+
+class PositionPlugin(CMSPlugin):
+    post = models.ForeignKey(Position)
+
+    def __unicode__(self):
+        return self.post.title
+
+
+

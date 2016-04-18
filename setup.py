@@ -5,9 +5,6 @@ import djangocms_career
 REQUIREMENTS = [
     'Django>=1.6,<1.10',
     'django-cms>=3.0.12',
-    'django-filer>=0.9.9',
-    'django-admin-sortable2>=0.5.2',
-    'django-hvad>=1.5.0',
 ]
 
 CLASSIFIERS = [
