@@ -1,3 +1,5 @@
+from datetime import datetime
+from dateutil import relativedelta
 from cms.models.pluginmodel import CMSPlugin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -23,6 +25,85 @@ class Post(CMSPlugin):
     website = models.CharField(verbose_name=_("Website"), help_text=_("Provide a link to the company's website."),
                                max_length=255)
 
-
     def __unicode__(self):
         return self.title
+
+    def get_month_diff(self, d1, d2):
+        """
+        Counting up the months from d1 (start date)
+        Until d2 (end date OR today) is reached.
+
+        Args:
+            d1: Start Date
+            d2: End date
+
+        Returns: Months
+
+        """
+
+        delta = relativedelta.relativedelta(d2, d1)
+        months = (delta.years*12) + delta.months
+
+        return months
+
+    @property
+    def get_month_diff_string(self):
+        """
+        Simple method to humanize delta from function
+        get_month_diff
+
+        Returns: diff_string
+        """
+
+        if self.active_post:
+            d2 = datetime.now()
+        else:
+            d2 = self.end_date
+
+        month_diff = int(self.get_month_diff(self.start_date, d2))
+
+        if month_diff < 12:
+            diff_string = (str(month_diff) + ' ' + str(_('Months')))
+
+            if month_diff <= 1:
+                diff_string = (str(1) + ' ' + str(_('Month')))
+
+        else:
+            year_diff = str(round(month_diff/12, 1))
+            diff_string = (year_diff + ' ' + str(_('Years')))
+
+        return diff_string
+
+    @property
+    def get_relative_length(self):
+        """
+        Method to get the relative length to
+        the longest length
+
+        Returns: length_percentage
+        """
+
+        longest_post = self.get_longest_post()
+        return (self.get_month_diff(self.start_date, self.end_date) / longest_post) * 100
+
+    def get_longest_post(self):
+        """
+        Get the post object with the longest duration
+
+        Returns: longest
+
+        """
+        longest = 0
+        for post in Post.objects.all():
+
+            if post.active_post:
+                d2 = datetime.now()
+            else:
+                d2 = post.end_date
+
+            diff = self.get_month_diff(post.start_date, d2)
+
+            if diff > longest:
+                longest = diff
+
+        return longest
