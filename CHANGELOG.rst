@@ -5,11 +5,12 @@ CHANGELOG
 Alpha (do not use these versions in production)
 ===============================================
 
-0.0.3 (2016-xx-xx)
+0.0.3 (2016-04-18)
 ------------------
 
 * optimized templates
 * added stylesheet
+* added model functions for different calculations
 
 0.0.2 (2016-04-18)
 ------------------
