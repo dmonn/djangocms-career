@@ -13,3 +13,4 @@ parts
 bin
 requirements.txt
 .idea/
+dist/

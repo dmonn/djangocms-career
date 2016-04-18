@@ -15,7 +15,7 @@ Installation
 
 This plugin requires `django CMS` 3.0.2+ or higher to be properly installed.
 
-* In your projects `virtualenv`, run ``pip install djangocms-career``.
+* In yourpip projects `virtualenv`, run ``pip install djangocms-career``.
 * Add ``djangocms_career`` to your ``INSTALLED_APPS`` (the order does not matter).
 * Run ``manage.py migrate djangocms_career``.
 

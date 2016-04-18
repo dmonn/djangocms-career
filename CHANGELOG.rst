@@ -12,6 +12,7 @@ Alpha (do not use these versions in production)
 * added stylesheet
 * added model functions for different calculations
 * added tests
+* fixed problematic tinymce migration
 
 0.0.2 (2016-04-18)
 ------------------

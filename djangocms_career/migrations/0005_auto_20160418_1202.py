@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import tinymce.models
 
 
 class Migration(migrations.Migration):
@@ -20,7 +19,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='description',
-            field=tinymce.models.HTMLField(help_text='Give a short description about your work and responsibilities.', max_length=2048, null=True, verbose_name='Description', blank=True),
+            field=models.TextField(help_text='Give a short description about your work and responsibilities.', max_length=2048, null=True, verbose_name='Description', blank=True),
         ),
         migrations.AlterField(
             model_name='post',
