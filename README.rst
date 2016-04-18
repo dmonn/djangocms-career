@@ -13,20 +13,24 @@ The plugin was initially created for - and first used by - my personal `CV-Page`
 Installation
 ============
 
-TBD
+This plugin requires `django CMS` 3.0.2+ or higher to be properly installed.
+
+* In your projects `virtualenv`, run ``pip install djangocms-career``.
+* Add ``djangocms_career`` to your ``INSTALLED_APPS`` (the order does not matter).
+* Run ``manage.py migrate djangocms_career``.
 
 =====
 Usage
 =====
 
-TBD
+DjangoCMS Career is a CMS- *Plugin*, which means, you can only use it in the frontend editing mode.
+In an available placeholder, just choose a *Career Container Plugin* and use the 'Plus'-Sign to add Positions to it.
 
-===============
-Troubleshooting
-===============
+=========
+Run tests
+=========
 
-TBD
-
+You can run tests via ``manage.py test djangocms_career``
 
 ============
 Contributing
