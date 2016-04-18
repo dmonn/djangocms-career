@@ -1,6 +1,16 @@
 {% load i18n %}
 
 <div class="position-entry" id="position-{{ instance.pk }}">
+
+    {# Make duration fixed width #}
+    {# Bubble is percentage of that #}
+    {# Line in middle, striped #}
+
+    <div class="position-duration">
+        <div class="duration-circle"></div>
+        <div class="duration-label"></div>
+    </div>
+
     <div class="position-block">
         <div class="position-header">
             <h2>{{ instance.title }}</h2>

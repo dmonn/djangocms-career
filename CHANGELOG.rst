@@ -1,8 +1,19 @@
 CHANGELOG
 =========
 
+===============================================
+Alpha (do not use these versions in production)
+===============================================
+
+0.0.3 (2016-xx-xx)
+------------------
+
+* optimized templates
+* added stylesheet
+
 0.0.2 (2016-04-18)
 ------------------
+
 * Renamed Position model to post because of naming clashes
 * Added is_public post
 * Renamed is_active flag to active_post
