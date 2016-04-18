@@ -23,7 +23,7 @@ class Post(CMSPlugin):
                                    null=True, blank=True)
 
     website = models.CharField(verbose_name=_("Website"), help_text=_("Provide a link to the company's website."),
-                               max_length=255)
+                               max_length=255, null=True, blank=True)
 
     def __unicode__(self):
         return self.title
@@ -69,8 +69,16 @@ class Post(CMSPlugin):
                 diff_string = (str(1) + ' ' + str(_('Month')))
 
         else:
-            year_diff = str(round(month_diff/12, 1))
+
+            if month_diff % 12 == 0:
+                year_diff = str(month_diff/12)
+            else:
+                year_diff = str(round(month_diff/12, 1))
+
             diff_string = (year_diff + ' ' + str(_('Years')))
+
+            if year_diff == '1':
+                diff_string = (str(1) + ' ' + str(_('Year')))
 
         return diff_string
 
@@ -78,19 +86,33 @@ class Post(CMSPlugin):
     def get_relative_length(self):
         """
         Method to get the relative length to
-        the longest length
+        the longest length.
+        Everything below 18% gets up'd to 18% (design reasons)
 
         Returns: length_percentage
         """
 
         longest_post = self.get_longest_post()
-        return (self.get_month_diff(self.start_date, self.end_date) / longest_post) * 100
+
+        if self.active_post:
+            end_date = datetime.now()
+        else:
+            end_date = self.end_date
+
+        relative_percentage = (float(self.get_month_diff(self.start_date, end_date)) / float(longest_post)) * 100
+
+        if relative_percentage <= 18:
+            length_percentage = 18
+        else:
+            length_percentage = relative_percentage
+
+        return length_percentage
 
     def get_longest_post(self):
         """
         Get the post object with the longest duration
 
-        Returns: longest
+        Returns: longest (amount of months)
 
         """
         longest = 0
