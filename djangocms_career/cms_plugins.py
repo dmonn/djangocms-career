@@ -12,7 +12,7 @@ class CareerPlugin(CMSPluginBase):
 
 
 class CareerContainer(CareerPlugin):
-    name = _("Career Plugin")
+    name = _("Career Plugin Container")
     render_template = "djangocms_career/career_plugin.html"
     allow_children = True
     child_classes = ['PositionObject']
@@ -24,7 +24,7 @@ class CareerContainer(CareerPlugin):
 
 class PositionObject(CareerPlugin):
     name = _("Position")
-    render_template = "position_object.html"
+    render_template = "djangocms_career/position_object.html"
     require_parent = True
     parent_classes = ['CareerContainer']
     model = PositionPlugin
@@ -32,3 +32,7 @@ class PositionObject(CareerPlugin):
     def render(self, context, instance, placeholder):
         context['instance'] = instance
         return context
+
+
+plugin_pool.register_plugin(CareerContainer)
+plugin_pool.register_plugin(PositionObject)
