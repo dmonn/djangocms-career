@@ -24,14 +24,19 @@ Usage
 =====
 
 DjangoCMS Career is a CMS- *Plugin*, which means, you can only use it in the frontend editing mode.
-In an available placeholder, just choose a *Career Container Plugin* and use the 'Plus'-Sign to add Positions to it.
-
+In an available placeholder, just choose a *Career Plugin Container* and use the 'Plus'-Sign to add Positions to it.
 
 +--------------------------------------------------------------------------------------------------+
 | .. image:: https://raw.githubusercontent.com/dmonn/djangocms-career/master/docs/img/career-1.png |
 +--------------------------------------------------------------------------------------------------+
+
+This dropdown will usually open if you click on a placeholder in structure-mode.
+
++--------------------------------------------------------------------------------------------------+
 | .. image:: https://raw.githubusercontent.com/dmonn/djangocms-career/master/docs/img/career-2.png |
 +--------------------------------------------------------------------------------------------------+
+
+After you've added a *Career Plugin Container*, you can add *Positions*.
 
 
 =========
