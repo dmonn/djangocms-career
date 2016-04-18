@@ -1,0 +1,18 @@
+/*
+*       @copyright: https://github.com/dmonn/djangocms-career
+*
+*/
+
+.career-showcase{
+    width:100%;
+}
+
+.position-entry{
+    width:100%;
+}
+
+.position-duration{
+    width:100px;
+    height:100px;
+    display:block;
+}
