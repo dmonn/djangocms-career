@@ -1,0 +1,15 @@
+*.pyc
+cms/django
+*.DS_Store
+/*env*/
+*.sqlite
+/*.egg-info/
+/*.egg/
+*.egg
+develop-eggs
+downloads
+eggs
+parts
+bin
+requirements.txt
+.idea/
