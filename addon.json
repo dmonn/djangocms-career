@@ -2,6 +2,7 @@
   "package-name": "djangocms-career",
   "installed-apps": [
     "cms",
-    "djangocms-career"
+    "djangocms_text_ckeditor",
+    "djangocms_career"
   ]
 }

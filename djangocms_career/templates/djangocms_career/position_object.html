@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load i18n %}
 
-</body>
-</html>
+<div class="position-entry" id="position-{{ instance.pk }}">
+    <div class="position-block">
+        <div class="position-header">
+            <h2>{{ instance.title }}</h2>
+            <h3><a href="{{ instance.website }}">{{ instance.company }}</a></h3>
+        </div>
+        <div class="position-meta">
+            <span class="entry-date">{{ instance.start_date }}</span>
+            {% if instance.active_post %}
+                <span class="until-now">{% trans ' until now.' %}</span>
+            {% else %}
+                <span class="end-date">{{ instance.end_date }}</span>
+            {% endif %}
+        </div>
+        <div class="position-content">
+        <span class="position-description">
+            {{ instance.description | safe }}
+        </span>
+        </div>
+    </div>
+</div>

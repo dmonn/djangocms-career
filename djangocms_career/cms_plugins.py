@@ -4,7 +4,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 
-from .models import PositionPlugin
+from .models import Post
 
 
 class CareerPlugin(CMSPluginBase):
@@ -12,6 +12,9 @@ class CareerPlugin(CMSPluginBase):
 
 
 class CareerContainer(CareerPlugin):
+    """
+    Container to hold position entries
+    """
     name = _("Career Plugin Container")
     render_template = "djangocms_career/career_plugin.html"
     allow_children = True
@@ -23,11 +26,14 @@ class CareerContainer(CareerPlugin):
 
 
 class PositionObject(CareerPlugin):
+    """
+    Position Entries, being held by CareerContainer
+    """
     name = _("Position")
     render_template = "djangocms_career/position_object.html"
     require_parent = True
     parent_classes = ['CareerContainer']
-    model = PositionPlugin
+    model = Post
 
     def render(self, context, instance, placeholder):
         context['instance'] = instance

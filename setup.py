@@ -5,6 +5,7 @@ import djangocms_career
 REQUIREMENTS = [
     'Django>=1.6,<1.10',
     'django-cms>=3.0.12',
+    'djangocms-text-ckeditor<=2.7'
 ]
 
 CLASSIFIERS = [

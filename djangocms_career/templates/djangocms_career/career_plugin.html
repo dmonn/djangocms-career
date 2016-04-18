@@ -1,0 +1,7 @@
+{% load cms_tags %}
+
+<section class="career-showcase">
+    {% for plugin in instance.child_plugin_instances %}
+        {% render_plugin plugin %}
+    {% endfor %}
+</section>
