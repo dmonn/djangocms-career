@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+0.1.0 (2016-04-20)
+------------------
+
+* **Initial Release**
+* Position Model
+* Career Plugin
+* Child Plugin Functionality
+* Plugin Template & Design
+
 ===============================================
 Alpha (do not use these versions in production)
 ===============================================
