@@ -49,7 +49,7 @@ class Post(CMSPlugin):
     @property
     def get_month_diff_string(self):
         """
-        Simple method to humanize delta from function
+        Simple method to humanize the months from function
         get_month_diff
 
         Returns: diff_string
@@ -61,23 +61,17 @@ class Post(CMSPlugin):
             d2 = self.end_date
 
         month_diff = int(self.get_month_diff(self.start_date, d2))
-
         if month_diff < 12:
             diff_string = (str(month_diff) + ' ' + str(_('Months')))
-
             if month_diff <= 1:
                 diff_string = (str(1) + ' ' + str(_('Month')))
-
         else:
-
             if month_diff % 12 == 0:
                 year_diff = str(month_diff/12)
             else:
                 year_diff = str(round(month_diff/12, 1))
-
             diff_string = (year_diff + ' ' + str(_('Years')))
-
-            if year_diff == '1':
+            if year_diff == '1.0':
                 diff_string = (str(1) + ' ' + str(_('Year')))
 
         return diff_string
@@ -106,7 +100,7 @@ class Post(CMSPlugin):
         else:
             length_percentage = relative_percentage
 
-        return length_percentage
+        return int(length_percentage)
 
     def get_longest_post(self):
         """

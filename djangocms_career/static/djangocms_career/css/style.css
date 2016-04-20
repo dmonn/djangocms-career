@@ -1,18 +1,121 @@
 /*
 *       @copyright: https://github.com/dmonn/djangocms-career
-*
+*       2016 - Dominic Monn
 */
 
-.career-showcase{
-    width:100%;
+.career-showcase {
+    width: 100%;
 }
 
-.position-entry{
-    width:100%;
+.position-entry {
+    width: 100%;
+    display: table;
+    padding: 7px 10px;
+
 }
 
-.position-duration{
-    width:100px;
-    height:100px;
-    display:block;
+.position-entry:hover {
+    background-color: rgba(104, 104, 104, 0.13);
+}
+
+.position-entry:hover .duration-circle {
+    -moz-transition: scale3d, 0.4s, ease;
+    -o-transition: scale3d, 0.4s, ease;
+    -webkit-transition: scale3d, 0.4s, ease;
+    transition: scale3d, 0.4s, ease;
+    transform: scale3d(0.96, 0.96, 1);
+}
+
+.position-entry:after {
+    clear: both;
+}
+
+.position-duration {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: left;
+    display: table;
+}
+
+.position-block {
+    float: left;
+    padding-left: 40px;
+    padding-top: 2px;
+    max-width: calc(100% - 150px);
+    max-width: -webkit-calc(100% - 150px);
+    max-width: -moz-calc(100% - 150px);
+}
+
+.position-duration:not(.first)::before {
+    display: block;
+    content: " ";
+    width: 1px;
+    height: 100px;
+    background: #cfdc00;
+    bottom: 50px;
+    left: 50px;
+    position: absolute;
+    z-index: 0;
+}
+
+.position-duration:not(.last)::after {
+    display: block;
+    content: " ";
+    width: 1px;
+    height: 100px;
+    background: #cfdc00;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+    z-index: 0;
+}
+
+.duration-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #cfdc00;
+    border-radius: 200px;
+    margin: -50px 0 0 -50px;
+    z-index: 1;
+    transform: scale3d(0.9, 0.9, 1);
+}
+
+.duration-label {
+    font-size: 15px;
+    text-align: center;
+    line-height: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    top: 50%;
+}
+
+.position-header h2 {
+    margin: 0;
+    display: inline;
+}
+
+.position-header h3 {
+    margin: 0;
+    display: inline;
+}
+
+.position-header h3 a {
+    padding-left: 4px;
+    color: grey;
+    text-decoration: none;
+}
+
+.position-meta{
+    font-style: italic;
+    padding-bottom:4px;
+    border-bottom: 1px solid rgba(104, 104, 104, 0.35);
+}
+
+.position-description{
+
 }
