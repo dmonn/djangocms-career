@@ -5,8 +5,13 @@ CHANGELOG
 Alpha (do not use these versions in production)
 ===============================================
 
-0.0.4 (2016-04-18)
+0.0.6 (2016-04-18)
 ------------------
+
+* added plugin design
+* fixed template
+* fixed some design issues
+* fixed model property calculation
 
 0.0.3 (2016-04-18)
 ------------------

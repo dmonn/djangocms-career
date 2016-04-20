@@ -69,9 +69,10 @@ class Post(CMSPlugin):
             if month_diff % 12 == 0:
                 year_diff = str(month_diff/12)
             else:
-                year_diff = str(round(month_diff/12, 1))
+                year_diff = str(round(float(month_diff)/12, 1))
+                print(year_diff)
             diff_string = (year_diff + ' ' + str(_('Years')))
-            if year_diff == '1.0':
+            if year_diff == '1':
                 diff_string = (str(1) + ' ' + str(_('Year')))
 
         return diff_string
