@@ -12,10 +12,17 @@
     display: table;
     padding: 7px 10px;
 
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    -ms-transition: background 0.3s linear;
+    -o-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+
 }
 
 .position-entry:hover {
-    background-color: rgba(104, 104, 104, 0.13);
+    background-color: rgba(104, 104, 104, 0.08);
+    cursor:default;
 }
 
 .position-entry:hover .duration-circle {
@@ -109,12 +116,12 @@
     text-decoration: none;
 }
 
-.position-meta{
+.position-meta {
     font-style: italic;
-    padding-bottom:4px;
+    padding-bottom: 4px;
     border-bottom: 1px solid rgba(104, 104, 104, 0.35);
 }
 
-.position-description{
+.position-description {
 
 }
