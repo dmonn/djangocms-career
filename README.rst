@@ -8,6 +8,9 @@ The plugin was initially created for - and first used by - my personal `CV-Page`
 
 .. _CV-Page: https://dmonn.ch
 
++------------------------------------------------------------------------------------------------------+
+| .. image:: https://raw.githubusercontent.com/dmonn/djangocms-career/master/docs/img/presentation.png |
++------------------------------------------------------------------------------------------------------+
 
 ============
 Installation
@@ -41,6 +44,8 @@ After you've added a *Career Plugin Container*, you can add *Positions*.
 =============
 Customization
 =============
+
+To override the plugins template, add ``djangocms_career/position_object.html`` to your template path.
 
 To customize the colors of the plugin, you have to override the CSS.
 
