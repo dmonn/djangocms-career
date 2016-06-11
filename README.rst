@@ -4,7 +4,7 @@ DjangoCMS Career
 
 DjangoCMS Career is a plugin to easily showcase career and educational paths.
 The recommended use for this plugin is on a Portfolio- or a personal CV-Website.
-The plugin was initially created for - and first used by - my personal `CV-Page`_. Check it out!
+The plugin was initially created for - and first used by - my personal `CV-Page`_.
 
 .. _CV-Page: https://dmonn.ch
 
@@ -47,26 +47,24 @@ Customization
 
 To override the plugins template, add ``djangocms_career/position_object.html`` to your template path.
 
-To customize the colors of the plugin, you have to override the CSS.
+To customize the colors of the plugin, you have to override the CSS. ::
 
-::
         .position-duration::before,
         .position-duration::after{
             background: YOURCOLOR;
         }
 
 
-::
         .duration-circle {
             background: YOURCOLOR;
         }
 
-If you want the bubbles to have a label:
+If you want the bubbles to have a label: ::
 
-::
         .duration-label {
             display: table-cell;
         }
+
 
 =========
 Run tests
