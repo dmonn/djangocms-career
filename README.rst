@@ -38,6 +38,23 @@ This dropdown will usually open if you click on a placeholder in structure-mode.
 
 After you've added a *Career Plugin Container*, you can add *Positions*.
 
+=============
+Customization
+=============
+
+To customize the colors of the plugin, you have to override the CSS.
+
+::
+    .position-duration::before,
+    .position-duration::after{
+        background: YOURCOLOR;
+    }
+
+
+::
+    .duration-circle {
+        background: YOURCOLOR;
+    }
 
 =========
 Run tests
