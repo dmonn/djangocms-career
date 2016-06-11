@@ -96,11 +96,12 @@
     font-size: 15px;
     text-align: center;
     line-height: 16px;
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
     z-index: 1;
     position: relative;
     width: 100%;
+    display: none;
 }
 
 .position-header h2 {

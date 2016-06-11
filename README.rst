@@ -45,16 +45,23 @@ Customization
 To customize the colors of the plugin, you have to override the CSS.
 
 ::
-    .position-duration::before,
-    .position-duration::after{
-        background: YOURCOLOR;
-    }
+        .position-duration::before,
+        .position-duration::after{
+            background: YOURCOLOR;
+        }
 
 
 ::
-    .duration-circle {
-        background: YOURCOLOR;
-    }
+        .duration-circle {
+            background: YOURCOLOR;
+        }
+
+If you want the bubbles to have a label:
+
+::
+        .duration-label {
+            display: table-cell;
+        }
 
 =========
 Run tests
