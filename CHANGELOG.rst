@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+0.1.3 (2016-08-26)
+------------------
+* Added 'Show year'-Bool
+
 0.1.2 (2016-06-11)
 ------------------
 * Fixed some design issues

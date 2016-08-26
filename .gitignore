@@ -1,5 +1,7 @@
 *.pyc
 cms/django
+.eggs/
+.eggs/
 *.DS_Store
 /*env*/
 *.sqlite

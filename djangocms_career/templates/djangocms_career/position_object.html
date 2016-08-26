@@ -11,7 +11,7 @@
                      margin-top: -{% widthratio instance.get_relative_length 2 1 %}px;
                      "></div>
         {% if instance.get_relative_length > 18 %}
-            <div class="duration-label">{{ instance.get_month_diff_string }}{{ instance.count }}</div>{% endif %}
+            <div class="duration-label" style="{% if instance.show_year %}display: table-cell;{% endif %}">{{ instance.get_month_diff_string }}{{ instance.count }}</div>{% endif %}
     </div>
 
     <div class="position-block">

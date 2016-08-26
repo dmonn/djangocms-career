@@ -25,6 +25,8 @@ class Post(CMSPlugin):
     website = models.CharField(verbose_name=_("Website"), help_text=_("Provide a link to the company's website."),
                                max_length=255, null=True, blank=True)
 
+    show_year = models.BooleanField(verbose_name=_("Show Year"), help_text=_('Displays how long the current position was held.'), default=False)
+
     def __unicode__(self):
         return self.title
 
