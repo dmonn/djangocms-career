@@ -7,9 +7,11 @@ python:
 install:
   - pip install --editable .
 
+before_script:
+  - python manage.py migrate djangocms_career
 
 script:
-  - python manage.py test
+  - python manage.py test djangocms_career
 
 env:
   - DJANGO="Django==1.5.8"
